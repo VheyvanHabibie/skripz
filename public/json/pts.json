@@ -1,0 +1,551 @@
+[
+    {
+        "nama_perguruan_tinggi": "Universitas Ibn Khaldun",
+        "provinsi_id": 9,
+        "kabupaten_id": 148
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Islam Nusantara",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Pakuan",
+        "provinsi_id": 9,
+        "kabupaten_id": 148
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Islam Syekh Yusuf",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Katolik Parahyangan",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Kristen Maranatha",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Pasundan",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Swadaya Gunung Jati",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas 17 Agustus 1945 Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Advent Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 148
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Wiralodra",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Langlangbuana",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Islam 45",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Jenderal Achmad Yani",
+        "provinsi_id": 9,
+        "kabupaten_id": 231
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Garut",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Nurtanio Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Komputer Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Muhammadiyah Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Suryakancana",
+        "provinsi_id": 9,
+        "kabupaten_id": 224
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Nasional Pasim",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Widyatama",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Putra Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 224
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Al-ghifari",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Kuningan",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Muhammadiyah Sukabumi",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Presiden",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Subang",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Sangga Buana",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Informatika Dan Bisnis Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Wanita Internasional",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Bale Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Serang Raya",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Teknologi Nusantara",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Nahdlatul Ulama Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Banten Jaya",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Telkom",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Lintas Internasional Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Islam Al-Ihya Kuningan",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Buana Perjuangan Karawang",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Perjuangan Tasikmalaya",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Muhammadiyah Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Bina Bangsa",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Nusa Putra",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Faletehan",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Pelita Bangsa",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Bina Insani",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Catur Insan Cendekia",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Adhirajasa Reswara Sanjaya",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Panca Sakti Bekasi",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Binaniaga Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 148
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Global Jakarta",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Mandiri",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Kebangsaan Republik Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Sebelas April",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Logistik dan Bisnis Internasional",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Teknologi Digital",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Bestari",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Matana",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Bani Saleh",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Satu",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Mayasari Bakti",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Islam Dr Khez Muttaqien",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Teknologi Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Muhammadiyah Cileungsi",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Universitas Sains Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+
+    {
+        "nama_perguruan_tinggi": "Institut Teknologi Nasional Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Institut Teknologi Harapan Bangsa",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Institut Bisnis Muhammadiyah Bekasi",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Institut Teknologi Garut",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Institut Digital Ekonomi LPKIA",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Mardira Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Mandala",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Bina Tunggal",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer LIKMI",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer IM",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajamen Informatika dan Komputer Tulus Cendekia",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Texmaco",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Pranata Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer DCI",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Cilegon",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "STMIK AMIK Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Rosma",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Pamitran",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Wastukancana",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Ilmu Komputer Poltek Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatka dan Komputer IKMI Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Informatika Sony Sugema",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Ganesha Bandung",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Fatahillah Cilegon",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Mercusuar",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Ilmu Komputer Insan Unggul",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Pratama Adi",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Dharma Negara",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Duta Bangsa",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer WIT Cirebon",
+        "provinsi_id": 9,
+        "kabupaten_id": 234
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Terpadu Nurul Fikri Depok",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika dan Komputer Al-Fath",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Manajemen Informatika Komputer Tazkia",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Sekolah Tinggi Teknologi Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+
+    {
+        "nama_perguruan_tinggi": "Akademi Manajemen Informatika Dan Komputer Garut",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+
+    {
+        "nama_perguruan_tinggi": "Politeknik TMKM",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik TEDC",
+        "provinsi_id": 9,
+        "kabupaten_id": 231
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Gunakarya Indonesia Bekasi",
+        "provinsi_id": 9,
+        "kabupaten_id": 91
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Sukabumi",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Piksi Ganesha",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Meta Industri Cikarang",
+        "provinsi_id": 9,
+        "kabupaten_id": 9
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Lembaga Pendidikan dan Pengembangan Profesi Indonesia",
+        "provinsi_id": 9,
+        "kabupaten_id": 58
+    },
+    {
+        "nama_perguruan_tinggi": "Politeknik Prasetiya Mandiri",
+        "provinsi_id": 9,
+        "kabupaten_id": 148
+    }
+]
