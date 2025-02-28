@@ -25,19 +25,19 @@
                     <div class="col-md-12">
                         <div class="card shadow-smooth custom-card">
                             <div class="card-body">
-                                {{-- @can('akses tambah-jabatan')
+                                @can('akses tambah-jabatan')
                                     <button class="btn btn-primary float-right mb-3" type="button" data-toggle="modal"
                                         data-target="#createModal" data-whatever="@mdo">
                                         Tambah <span class="fe fe-plus fe-15"></span>
                                     </button>
-                                @endcan --}}
+                                @endcan
                                 <div class="table-responsive">
                                     <table class="table dataTables" id="dataTable-1">
                                         <thead>
                                             <tr>
                                                 <th class="text-start">No</th>
                                                 <th class="text-start">Nama Provinsi</th>
-                                                {{-- <th>Aksi</th> --}}
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -45,24 +45,24 @@
                                                 <tr>
                                                     <td class="text-start">{{ $loop->iteration }}</td>
                                                     <td class="text-start">{{ $item->name }}</td>
-                                                    {{-- <td>
-                                                        <form action="{{ route('jabatan.destroy', $item->id) }}"
+                                                    <td>
+                                                        <form action="{{ route('provinsi.destroy', $item->id) }}"
                                                             method="POST" id="Hapus{{ $item->id }}">
                                                             @method('DELETE')
                                                             @csrf
-                                                            @can('akses hapus-jabatan')
+                                                            @can('akses hapus-provinsi')
                                                                 <button class="btn btn-outline-danger" id="Hapus"
                                                                     onclick="deleteActivity({{ $item->id }})"><i
                                                                         class="fe fe-trash fe-12"></i></button>
                                                             @endcan
-                                                            @can('akses edit-jabatan')
+                                                            @can('akses edit-provinsi')
                                                                 <button class="btn btn-outline-primary" data-toggle="modal"
                                                                     data-target="#editModal{{ $item->id }}"
                                                                     data-whatever="@mdo" type="button"><i
                                                                         class="fe fe-edit-3 fe-12 "></i></button>
                                                             @endcan
                                                         </form>
-                                                    </td> --}}
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -75,6 +75,6 @@
             </div>
         </div>
     </div>
-    {{-- @include('pages.datamaster.data-jabatan.create')
-    @include('pages.datamaster.data-jabatan.edit') --}}
+    @include('pages.datamaster.data-wilayah.provinsi.create')
+    @include('pages.datamaster.data-wilayah.provinsi.edit')
 @endsection
