@@ -42,31 +42,36 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($kabupaten as $item)
-                                                <tr>
-                                                    <td class="text-start">{{ $loop->iteration }}</td>
-                                                    <td class="text-start">{{ $item->type }} {{ $item->name }}</td>
-                                                    <td class="text-start">{{ $item->provinsi->name }}</td>
-                                                    <td>
-                                                        <form action="{{ route('kabupaten.destroy', $item->id) }}"
-                                                            method="POST" id="Hapus{{ $item->id }}">
-                                                            @method('DELETE')
-                                                            @csrf
-                                                            @can('akses hapus-kabupaten')
-                                                                <button class="btn btn-outline-danger" id="Hapus"
-                                                                    onclick="deleteActivity({{ $item->id }})"><i
-                                                                        class="fe fe-trash fe-12"></i></button>
-                                                            @endcan
-                                                            @can('akses edit-kabupaten')
-                                                                <button class="btn btn-outline-primary" data-toggle="modal"
-                                                                    data-target="#editModal{{ $item->id }}"
-                                                                    data-whatever="@mdo" type="button"><i
-                                                                        class="fe fe-edit-3 fe-12 "></i></button>
-                                                            @endcan
-                                                        </form>
-                                                    </td>
-                                                </tr>
+                                            @foreach ($kabupaten as $provinsi_id => $items)
+                                                @foreach ($items as $kab)
+                                                    <tr>
+                                                        <td class="text-start">{{ $loop->iteration }}</td>
+                                                        <td class="text-start">{{ $kab->type }} {{ $kab->name }}</td>
+                                                        <td class="text-start">{{ $kab->provinsi->name }}</td>
+                                                        <td>
+                                                            <form action="{{ route('kabupaten.destroy', $kab->id) }}"
+                                                                method="POST" id="Hapus{{ $kab->id }}">
+                                                                @method('DELETE')
+                                                                @csrf
+                                                                @can('akses hapus-kabupaten')
+                                                                    <button class="btn btn-outline-danger" id="Hapus"
+                                                                        onclick="deleteActivity({{ $kab->id }})">
+                                                                        <i class="fe fe-trash fe-12"></i>
+                                                                    </button>
+                                                                @endcan
+                                                                @can('akses edit-kabupaten')
+                                                                    <button class="btn btn-outline-primary" data-toggle="modal"
+                                                                        data-target="#editModal{{ $kab->id }}"
+                                                                        data-whatever="@mdo" type="button">
+                                                                        <i class="fe fe-edit-3 fe-12 "></i>
+                                                                    </button>
+                                                                @endcan
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             @endforeach
+
                                         </tbody>
                                     </table>
                                 </div>
