@@ -27,14 +27,14 @@
                         <div class="form-group">
                             <label for="jenis_kelamin" class="required">Jenis Kelamin</label>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="jenis_kelamin" class="custom-control-input"
+                                <input type="radio" id="customRadios" name="jenis_kelamin" class="custom-control-input"
                                     value="Laki-Laki" {{ old('jenis_kelamin', $item->jenis_kelamin) == 'Laki-Laki' ? 'checked' : '' }} required>
-                                <label class="custom-control-label" for="customRadio1">Laki-Laki</label>
+                                <label class="custom-control-label" for="customRadios">Laki-Laki</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="jenis_kelamin" class="custom-control-input"
+                                <input type="radio" id="customRadioss" name="jenis_kelamin" class="custom-control-input"
                                     value="Perempuan" {{ old('jenis_kelamin', $item->jenis_kelamin) == 'Perempuan' ? 'checked' : '' }} required>
-                                <label class="custom-control-label" for="customRadio2">Perempuan</label>
+                                <label class="custom-control-label" for="customRadioss">Perempuan</label>
                             </div>
                             @error('jenis_kelamin')
                                 <span class="invalid-feedback">{{ $message }}</span>
