@@ -26,20 +26,24 @@
 
                         <div class="form-group">
                             <label for="jenis_kelamin" class="required">Jenis Kelamin</label>
+
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadios" name="jenis_kelamin" class="custom-control-input"
+                                <input type="radio" id="customRadioLaki{{$item->id}}" name="jenis_kelamin" class="custom-control-input"
                                     value="Laki-Laki" {{ old('jenis_kelamin', $item->jenis_kelamin) == 'Laki-Laki' ? 'checked' : '' }} required>
-                                <label class="custom-control-label" for="customRadios">Laki-Laki</label>
+                                <label class="custom-control-label" for="customRadioLaki{{$item->id}}">Laki-Laki</label>
                             </div>
+
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadioss" name="jenis_kelamin" class="custom-control-input"
+                                <input type="radio" id="customRadioPerempuan{{$item->id}}" name="jenis_kelamin" class="custom-control-input"
                                     value="Perempuan" {{ old('jenis_kelamin', $item->jenis_kelamin) == 'Perempuan' ? 'checked' : '' }} required>
-                                <label class="custom-control-label" for="customRadioss">Perempuan</label>
+                                <label class="custom-control-label" for="customRadioPerempuan{{$item->id}}">Perempuan</label>
                             </div>
+
                             @error('jenis_kelamin')
-                                <span class="invalid-feedback">{{ $message }}</span>
+                                <span class="invalid-feedback d-block">{{ $message }}</span>
                             @enderror
                         </div>
+
 
                         <div class="form-group">
                             <label for="nip_kaprodi" class="required">NIP</label>
