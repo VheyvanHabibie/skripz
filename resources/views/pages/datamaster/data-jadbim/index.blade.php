@@ -53,7 +53,7 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $item->mahbim->mahasiswa->name }}</td>
-                                                    <td>{{ $item->dospem->dosen->nama_dosen }}</td>
+                                                    <td>{{ $item->dospem->dosen->nama_dosen ?? '-' }}</td>
                                                     <td>{{ $item->prodi }}</td>
                                                     <td>{{ \Carbon\Carbon::parse($item->tanggal_mulai)->locale('id')->translatedFormat('d F Y') }}
                                                     </td>
