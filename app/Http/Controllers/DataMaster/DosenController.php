@@ -247,7 +247,7 @@ class DosenController extends Controller
                 unlink(public_path($dosen->paraf));
             }
 
-            return redirect()->route('dosen.index')->with('success', 'Data dosen berhasil dihapus.');
+            return redirect()->route('dosen.index')->with('success', 'destroy');
         } else {
             return redirect()->route('dosen.index')->with('fail', 'Gagal menghapus data dosen.');
         }
