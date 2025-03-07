@@ -161,7 +161,7 @@
                 </li>
             </ul>
         @endcan
-        @can('akses kerja-sama')
+        {{-- @can('akses kerja-sama')
             <ul class="navbar-nav flex-fill w-100 mb-2">
                 <li class="nav-item w-100 {{ Route::currentRouteNamed('kerjasama.index') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('kerjasama.index') }}">
@@ -170,7 +170,7 @@
                     </a>
                 </li>
             </ul>
-        @endcan
+        @endcan --}}
         @can('akses langganan')
             <ul class="navbar-nav flex-fill w-100 mb-2">
                 <li class="nav-item w-100 {{ Route::currentRouteNamed('manajemenlangganan.index') ? 'active' : '' }}">
