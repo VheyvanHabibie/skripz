@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Sidang;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Mahasiswa extends Model
 {
@@ -25,4 +26,9 @@ class Mahasiswa extends Model
     {
         return self::where('slug', $slug)->firstOrFail();
     }
+        // Relasi ke Sidang
+        public function sidangs()
+        {
+            return $this->hasMany(Sidang::class);
+        }
 }

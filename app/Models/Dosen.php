@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\SidangPenguji;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Dosen extends Model
 {
@@ -55,5 +56,9 @@ class Dosen extends Model
     public static function findBySlug($slug)
     {
         return self::where('slug', $slug)->firstOrFail();
+    }
+    public function sidangPengujis()
+    {
+        return $this->hasMany(SidangPenguji::class);
     }
 }

@@ -145,6 +145,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\PenilaianController::class, 'penilaian'])->name('penilaian.index');
         Route::get('sidang', [App\Http\Controllers\PenilaianController::class, 'sidang'])->name('sidang.index');
         Route::get('seminar', [App\Http\Controllers\PenilaianController::class, 'seminar'])->name('seminar.index');
+        Route::post('/sidang/store', [App\Http\Controllers\PenilaianController::class, 'penilaianSidang'])->name('sidang.store');
+        Route::get('/sidang/{id}/hasil', [App\Http\Controllers\PenilaianController::class, 'hasilPenilaian'])->name('sidang.hasil');
+        Route::get('/sidang/daftar', [App\Http\Controllers\PenilaianController::class, 'daftarPenilaian'])->name('sidang.daftar');
+
+
     });
     // Tulisan Route
     Route::get('/tulisan', [App\Http\Controllers\Berkas\TulisanController::class, 'index'])->name('tulisan.index');

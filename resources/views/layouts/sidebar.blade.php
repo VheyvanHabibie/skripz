@@ -138,6 +138,15 @@
                 </li>
             </ul>
         @endcan
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li
+                class="nav-item w-100 {{ Route::currentRouteNamed('sidang.daftar', 'sidang.hasil') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('sidang.daftar') }}">
+                    <i class="fe bi-pencil-square fe-16 "></i>
+                    <span class="ml-3 item-text font-weight-bold">Hasil Penilaian</span>
+                </a>
+            </li>
+        </ul>
         @can('akses laporan')
             <ul class="navbar-nav flex-fill w-100 mb-2">
                 <li
