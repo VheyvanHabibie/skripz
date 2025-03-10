@@ -52,7 +52,7 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $item->penanggung_jawab }}</td>
-                                                    <td>{{ $item->email_pj }}</td>
+                                                    <td>{{ $item->email_mitra }}</td>
                                                     {{-- <td>{{ $item->bidang_usaha }}</td>
                                                     <td>{{ Str::limit($item->alamat_mitra, 10) }}</td>
                                                     <td>{{ $item->email_mitra }}</td>

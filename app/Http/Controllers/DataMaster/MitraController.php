@@ -59,7 +59,7 @@ class MitraController extends Controller
         $user = User::create([
             'name'     => $request->nama_mitra,
             'email'    => $request->email_mitra,
-            'role_id'  => 4,
+            'role_id'  => 6,
             'foto'     => 'images/mitra/' . $imageName,
             'password' => Hash::make('password'),
         ]);
