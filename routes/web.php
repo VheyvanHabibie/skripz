@@ -48,8 +48,6 @@ Route::get('/dashboard', function () {
     return redirect('/dashboard');
 });
 
-Route::get('/bayar-langganan/callback/thanks', [App\Http\Controllers\Content\LanggananController::class, 'paymentCallback'])->name('premium.callback');
-
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
