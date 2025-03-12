@@ -14,7 +14,7 @@ class LaporanYudisiumController extends Controller
      */
     public function index()
     {
-        $yudisium = LaporanYudisium::all();
+        $yudisium = LaporanYudisium::orderBy('created_at', 'DESC')->get();
         $mahasiswa = Mahasiswa::all();
         return view('pages.laporan.lapor-yudisium.index', compact('yudisium', 'mahasiswa'));
     }

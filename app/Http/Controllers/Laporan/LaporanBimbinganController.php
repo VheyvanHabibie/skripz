@@ -13,7 +13,7 @@ class LaporanBimbinganController extends Controller
      */
     public function index()
     {
-        $bimbingan = LaporanBimbingan::all();
+        $bimbingan = LaporanBimbingan::orderBy('created_at', 'DESC')->get();
         return view('pages.laporan.lapor-bimbingan.index', compact('bimbingan'));
     }
 

@@ -14,7 +14,7 @@ class LaporanSidangController extends Controller
      */
     public function index()
     {
-        $sidang = LaporanSidang::all();
+        $sidang = LaporanSidang::orderBy('created_at', 'DESC')->get();
         $dospeng = DosenPenguji::all();
         return view('pages.laporan.lapor-sidang.index', compact('sidang', 'dospeng'));
     }

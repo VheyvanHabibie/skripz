@@ -13,7 +13,7 @@ class LaporanSeminarController extends Controller
      */
     public function index()
     {
-        $seminar = LaporanSeminar::all();
+        $seminar = LaporanSeminar::orderBy('created_at', 'DESC')->get();
         return view('pages.laporan.lapor-seminar.index', compact('seminar'));
     }
 

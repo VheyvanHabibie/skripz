@@ -16,7 +16,7 @@ class LaporanUsulanProposalController extends Controller
     public function index()
     {
         $dospem = DosenPembimbing::all();
-        $proposal = LaporanProposal::all();
+        $proposal = LaporanProposal::orderBy('created_at', 'DESC')->get();
         return view('pages.laporan.lapor-usulanproposal.index', compact('dospem', 'proposal'));
     }
 

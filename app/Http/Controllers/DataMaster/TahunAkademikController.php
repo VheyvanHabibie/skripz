@@ -13,7 +13,7 @@ class TahunAkademikController extends Controller
      */
     public function index()
     {
-        $thakademik = TahunAkademik::all();
+        $thakademik = TahunAkademik::orderBy('created_at', 'DESC')->get();
         return view('pages.datamaster.data-thakademik.index', compact('thakademik'));
     }
 
