@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('laporan_proposals', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('dosen_pembimbing_id');
+            $table->unsignedBigInteger('mahasiswa_id');
             $table->string('judul_proposal');
-            $table->string('bidang_kajian');
+            $table->text('bidang_kajian');
             $table->text('file_laporan');
             $table->date('tanggal_pengajuan');
             $table->enum('status_laporan', ['Disetujui', 'Ditolak', 'Diajukan'])->default('Diajukan');
             $table->timestamps();
             $table->foreign('dosen_pembimbing_id')->references('id')->on('dosen_pembimbings')->onDelete('cascade');
+            $table->foreign('mahasiswa_id')->references('id')->on('mahasiswas')->onDelete('cascade');
 
         });
     }

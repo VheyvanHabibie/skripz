@@ -14,4 +14,8 @@ class LaporanProposal extends Model
     {
         return $this->belongsTo(DosenPembimbing::class, 'dosen_pembimbing_id', 'id');
     }
+    public function mahasiswa()
+    {
+        return $this->belongsTo(Mahasiswa::class, 'mahasiswa_id', 'id');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Laporan;
 
+use App\Models\Mahasiswa;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\DosenPembimbing;
@@ -16,8 +17,9 @@ class LaporanUsulanProposalController extends Controller
     public function index()
     {
         $dospem = DosenPembimbing::all();
+        $mahasiswas = Mahasiswa::all();
         $proposal = LaporanProposal::orderBy('created_at', 'DESC')->get();
-        return view('pages.laporan.lapor-usulanproposal.index', compact('dospem', 'proposal'));
+        return view('pages.laporan.lapor-usulanproposal.index', compact('dospem', 'proposal', 'mahasiswas'));
     }
 
     /**
@@ -35,6 +37,7 @@ class LaporanUsulanProposalController extends Controller
     {
         $request->validate([
             'dosen_pembimbing_id'   => 'required',
+            'mahasiswa_id'          => 'required',
             'judul_proposal'        => 'required|string|max:255',
             'bidang_kajian'         => 'required|string|max:255',
             'tanggal_pengajuan'     => 'required',
@@ -46,6 +49,7 @@ class LaporanUsulanProposalController extends Controller
         $request->file('file_laporan')->move(public_path('files/laporan-usulan-proposal'), $fileName);
 
         $proposal->dosen_pembimbing_id  = $request->dosen_pembimbing_id;
+        $proposal->mahasiswa_id         = $request->mahasiswa_id;
         $proposal->judul_proposal       = $request->judul_proposal;
         $proposal->bidang_kajian        = $request->bidang_kajian;
         $proposal->tanggal_pengajuan    = $request->tanggal_pengajuan;
@@ -78,6 +82,7 @@ class LaporanUsulanProposalController extends Controller
     {
         $request->validate([
             'dosen_pembimbing_id'   => 'required',
+            'mahasiswa_id'          => 'required',
             'judul_proposal'        => 'required|string|max:255',
             'bidang_kajian'         => 'required|string|max:255',
             'tanggal_pengajuan'     => 'required',
@@ -96,6 +101,7 @@ class LaporanUsulanProposalController extends Controller
         }
         $proposal->update([
             'dosen_pembimbing_id'   => $request->dosen_pembimbing_id,
+            'mahasiswa_id'          => $request->mahasiswa_id,
             'judul_proposal'        => $request->judul_proposal,
             'bidang_kajian'         => $request->bidang_kajian,
             'tanggal_pengajuan'     => $request->tanggal_pengajuan,

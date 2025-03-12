@@ -11,20 +11,29 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="judul_proposal" class="required">Judul Proposal</label>
-                        <input type="text" class="form-control" id="judul_proposal" name="judul_proposal" required>
+                        <label for="mahasiswa_id" class="required">Mahasiswa</label>
+                        <select class="form-control select2" id="mahasiswa_id" name="mahasiswa_id" required>
+                            @foreach ($mahasiswas as $data)
+                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="dosen_pembimbing_id" class="required">Dosen Pembimbing</label>
-                        <select class="form-control select2" id="dosen_pembimbing_id" name="dosen_pembimbing_id" required>
+                        <select class="form-control select2" id="dosen_pembimbing_id" name="dosen_pembimbing_id"
+                            required>
                             @foreach ($dospem as $data)
                                 <option value="{{ $data->id }}">{{ $data->dosen->nama_dosen }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="judul_proposal" class="required">Judul Proposal</label>
+                        <input type="text" class="form-control" id="judul_proposal" name="judul_proposal" required>
+                    </div>
+                    <div class="form-group">
                         <label for="bidang_kajian" class="required">Bidang Kajian</label>
-                        <input type="text" class="form-control" id="bidang_kajian" name="bidang_kajian" required>
+                        <textarea name="bidang_kajian" id="bidang_kajian" cols="30" rows="6" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="file_laporan" class="required">File Laporan</label>
@@ -33,7 +42,8 @@
                     </div>
                     <div class="form-group">
                         <label for="tanggal_pengajuan" class="required">Tanggal Pengajuan</label>
-                        <input type="date" class="form-control" id="tanggal_pengajuan" name="tanggal_pengajuan" required>
+                        <input type="date" class="form-control" id="tanggal_pengajuan" name="tanggal_pengajuan"
+                            required>
                     </div>
                 </div>
                 <div class="modal-footer">

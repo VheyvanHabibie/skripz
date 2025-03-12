@@ -49,10 +49,11 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Judul Proposal</th>
+                                                <th>Nama Mahasiswa</th>
                                                 <th>Nama Pembimbing</th>
+                                                <th>Judul Proposal</th>
                                                 <th>Bidang Kajian</th>
-                                                {{-- <th>FIle Laporan</th> --}}
+                                                <th>File Laporan</th>
                                                 <th>Tanggal Pengajuan</th>
                                                 <th>Status Laporan</th>
                                                 <th>Aksi</th>
@@ -62,11 +63,12 @@
                                             @foreach ($proposal as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $item->judul_proposal }}</td>
+                                                    <td>{{ $item->mahasiswa->name }}</td>
                                                     <td>{{ $item->dospem->dosen->nama_dosen }}</td>
+                                                    <td>{{ $item->judul_proposal }}</td>
                                                     <td>{{ $item->bidang_kajian }}</td>
-                                                    {{-- <td><a href="{{ asset($item->file_laporan) }}" target="_blank">Lihat
-                                                            File</a></td> --}}
+                                                    <td><a href="{{ asset($item->file_laporan) }}" target="_blank">Lihat
+                                                            File</a></td>
                                                     <td>{{ \Carbon\Carbon::parse($item->tanggal_pengajuan)->locale('id')->translatedFormat('d F Y') }}
                                                     </td>
                                                     <td>
