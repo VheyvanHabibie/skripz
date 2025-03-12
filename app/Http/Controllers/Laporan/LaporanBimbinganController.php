@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Laporan;
 
+use App\Models\Mahasiswa;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\DosenPembimbing;
 use App\Models\LaporanBimbingan;
 use App\Http\Controllers\Controller;
 
@@ -13,8 +16,10 @@ class LaporanBimbinganController extends Controller
      */
     public function index()
     {
+        $dospem = DosenPembimbing::all();
+        $mahasiswas = Mahasiswa::all();
         $bimbingan = LaporanBimbingan::orderBy('created_at', 'DESC')->get();
-        return view('pages.laporan.lapor-bimbingan.index', compact('bimbingan'));
+        return view('pages.laporan.lapor-bimbingan.index', compact('bimbingan', 'dospem', 'mahasiswas'));
     }
 
     /**
@@ -31,6 +36,8 @@ class LaporanBimbinganController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'dosen_pembimbing_id'   => 'required',
+            'mahasiswa_id'          => 'required',
             'tanggal_bimbingan'      => 'required',
             'topik_bahasan'          => 'required',
             'hasil_bimbingan'        => 'required|string|max:255',
@@ -43,6 +50,8 @@ class LaporanBimbinganController extends Controller
         $fileName = time() . '_' . $request->file('file_laporan')->getClientOriginalName();
         $request->file('file_laporan')->move(public_path('files/laporan-bimbingan'), $fileName);
 
+        $bimbingan->dosen_pembimbing_id = $request->dosen_pembimbing_id;
+        $bimbingan->mahasiswa_id        = $request->mahasiswa_id;
         $bimbingan->tanggal_bimbingan   = $request->tanggal_bimbingan;
         $bimbingan->topik_bahasan       = $request->topik_bahasan;
         $bimbingan->hasil_bimbingan     = $request->hasil_bimbingan;
@@ -77,6 +86,8 @@ class LaporanBimbinganController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'dosen_pembimbing_id'   => 'required',
+            'mahasiswa_id'          => 'required',
             'tanggal_bimbingan'      => 'required',
             'topik_bahasan'          => 'required',
             'hasil_bimbingan'        => 'required|string|max:255',
@@ -96,6 +107,8 @@ class LaporanBimbinganController extends Controller
             $file->move(public_path('files/laporan-kemajuan-bimbingan'), $fileName);
         }
         $bimbingan->update([
+            'dosen_pembimbing_id'   => $request->dosen_pembimbing_id,
+            'mahasiswa_id'          => $request->mahasiswa_id,
             'tanggal_bimbingan'      =>  $request->tanggal_bimbingan,
             'topik_bahasan'          =>  $request->topik_bahasan,
             'hasil_bimbingan'        =>  $request->hasil_bimbingan,

@@ -11,6 +11,23 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="mahasiswa_id" class="required">Mahasiswa</label>
+                        <select class="form-control select2" id="mahasiswa_id" name="mahasiswa_id" required>
+                            @foreach ($mahasiswas as $data)
+                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dosen_pembimbing_id" class="required">Dosen Pembimbing</label>
+                        <select class="form-control select2" id="dosen_pembimbing_id" name="dosen_pembimbing_id"
+                            required>
+                            @foreach ($dospem as $data)
+                                <option value="{{ $data->id }}">{{ $data->dosen->nama_dosen }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="tanggal_bimbingan" class="required">Tanggal Bimbingan</label>
                         <input type="date" class="form-control" id="tanggal_bimbingan" name="tanggal_bimbingan" required>
                     </div>
@@ -20,11 +37,11 @@
                     </div>
                     <div class="form-group">
                         <label for="hasil_bimbingan" class="required">Hasil Bimbingan</label>
-                        <input type="text" class="form-control" id="hasil_bimbingan" name="hasil_bimbingan" required>
+                        <textarea name="hasil_bimbingan" id="hasil_bimbingan" class="form-control" cols="30" rows="4" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="saran_pembimbing" class="required">Saran Pembimbing</label>
-                        <input type="text" class="form-control" id="saran_pembimbing" name="saran_pembimbing" required>
+                        <textarea name="saran_pembimbing" id="saran_pembimbing" class="form-control" cols="30" rows="4" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="catatan_mahasiswa" class="required">Catatan Mahasiswa</label>

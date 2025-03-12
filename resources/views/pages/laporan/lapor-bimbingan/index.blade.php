@@ -35,12 +35,14 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
+                                                <th>Nama Mahasiswa</th>
+                                                <th>Nama Dosen Pembimbing</th>
                                                 <th>Tanggal Bimbingan</th>
                                                 <th>Topik Bahasan</th>
                                                 <th>Hasil Bimbingan</th>
                                                 <th>Saran Pembimbing</th>
                                                 <th>Catatan Mahasiswa</th>
-                                                {{-- <th>File Laporan</th> --}}
+                                                <th>File Laporan</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -48,14 +50,16 @@
                                             @foreach ($bimbingan as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
+                                                    <td>{{ $item->mahasiswa->name }}</td>
+                                                    <td>{{ $item->dospem->dosen->nama_dosen }}</td>
                                                     <td>{{ \Carbon\Carbon::parse($item->tanggal_bimbingan)->locale('id')->translatedFormat('d F Y') }}
                                                     </td>
                                                     <td>{{ $item->topik_bahasan }}</td>
                                                     <td>{{ $item->hasil_bimbingan }}</td>
                                                     <td>{{ $item->saran_pembimbing }}</td>
                                                     <td>{{ $item->catatan_mahasiswa }}</td>
-                                                    {{-- <td><a href="{{ asset($item->file_laporan) }}" target="_blank">Lihat
-                                                            File</a></td> --}}
+                                                    <td><a href="{{ asset($item->file_laporan) }}" target="_blank">Lihat
+                                                            File</a></td>
                                                     <td>
                                                         <form action="{{ route('laporan-bimbingan.destroy', $item->id) }}"
                                                             method="POST" id="Hapus{{ $item->id }}">
