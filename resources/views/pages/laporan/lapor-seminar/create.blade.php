@@ -11,16 +11,34 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="mahasiswa_id" class="required">Mahasiswa</label>
+                        <select class="form-control select2" id="mahasiswa_id" name="mahasiswa_id" required>
+                            @foreach ($mahasiswas as $data)
+                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dosen_penguji_id" class="required">Dosen Penguji</label>
+                        <select class="form-control select2" id="dosen_penguji_id" name="dosen_penguji_id"
+                            required>
+                            @foreach ($dospeng as $data)
+                                <option value="{{ $data->id }}">{{ $data->dosen->nama_dosen }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="tanggal_seminar" class="required">Tanggal Seminar</label>
                         <input type="date" class="form-control" id="tanggal_seminar" name="tanggal_seminar" required>
                     </div>
                     <div class="form-group">
                         <label for="hasil_seminar" class="required">Hasil Seminar</label>
-                        <input type="text" class="form-control" id="hasil_seminar" name="hasil_seminar" required>
+                        <textarea name="hasil_seminar" id="hasil_seminar" class="form-control" cols="30" rows="4" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="saran_penguji" class="required">Saran Penguji</label>
-                        <input type="text" class="form-control" id="saran_penguji" name="saran_penguji" required>
+                        <textarea name="saran_penguji" id="saran_penguji" class="form-control" cols="30" rows="4" required></textarea>
+
                     </div>
                     <div class="form-group">
                         <label for="catatan_mahasiswa" class="required">Catatan Mahasiswa</label>

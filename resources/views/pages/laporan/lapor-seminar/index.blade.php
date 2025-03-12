@@ -35,6 +35,8 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
+                                                <th>Nama Mahasiswa</th>
+                                                <th>Nama Dosen Penguji</th>
                                                 <th>Tanggal Seminar</th>
                                                 <th>Hasil Seminar</th>
                                                 <th>Saran Penguji</th>
@@ -47,6 +49,8 @@
                                             @foreach ($seminar as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
+                                                    <td>{{ $item->mahasiswa->name }}</td>
+                                                    <td>{{ $item->dospeng->dosen->nama_dosen }}</td>
                                                     <td>{{ \Carbon\Carbon::parse($item->tanggal_seminar)->locale('id')->translatedFormat('d F Y') }}
                                                     </td>
                                                     <td>{{ $item->hasil_seminar }}</td>

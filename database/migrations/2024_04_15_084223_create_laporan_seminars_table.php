@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('laporan_seminars', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('dosen_penguji_id');
+            $table->unsignedBigInteger('mahasiswa_id');
             $table->date('tanggal_seminar');
             $table->text('hasil_seminar');
             $table->text('saran_penguji');
             $table->text('catatan_mahasiswa');
             $table->text('file_laporan');
+            $table->foreign('dosen_penguji_id')->references('id')->on('dosen_pengujis')->onDelete('cascade');
+            $table->foreign('mahasiswa_id')->references('id')->on('mahasiswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

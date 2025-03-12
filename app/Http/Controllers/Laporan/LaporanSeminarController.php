@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Laporan;
 
+use App\Models\Mahasiswa;
+use Illuminate\Support\Str;
+use App\Models\DosenPenguji;
 use Illuminate\Http\Request;
 use App\Models\LaporanSeminar;
 use App\Http\Controllers\Controller;
@@ -13,8 +16,10 @@ class LaporanSeminarController extends Controller
      */
     public function index()
     {
+        $dospeng = DosenPenguji::all();
+        $mahasiswas = Mahasiswa::all();
         $seminar = LaporanSeminar::orderBy('created_at', 'DESC')->get();
-        return view('pages.laporan.lapor-seminar.index', compact('seminar'));
+        return view('pages.laporan.lapor-seminar.index', compact('seminar', 'dospeng', 'mahasiswas'));
     }
 
     /**
@@ -31,6 +36,8 @@ class LaporanSeminarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'dosen_penguji_id'      => 'required',
+            'mahasiswa_id'          => 'required',
             'tanggal_seminar'       => 'required',
             'hasil_seminar'         => 'required',
             'saran_penguji'         => 'required|string|max:255',
@@ -42,6 +49,8 @@ class LaporanSeminarController extends Controller
         $fileName = time() . '_' . $request->file('file_laporan')->getClientOriginalName();
         $request->file('file_laporan')->move(public_path('files/laporan-kemajuan-seminar'), $fileName);
 
+        $seminar->dosen_penguji_id     = $request->dosen_penguji_id;
+        $seminar->mahasiswa_id         = $request->mahasiswa_id;
         $seminar->tanggal_seminar      = $request->tanggal_seminar;
         $seminar->hasil_seminar        = $request->hasil_seminar;
         $seminar->saran_penguji        = $request->saran_penguji;
@@ -74,6 +83,8 @@ class LaporanSeminarController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'dosen_penguji_id'      => 'required',
+            'mahasiswa_id'          => 'required',
             'tanggal_seminar'       => 'required',
             'hasil_seminar'         => 'required',
             'saran_penguji'         => 'required|string|max:255',
@@ -91,6 +102,8 @@ class LaporanSeminarController extends Controller
             $file->move(public_path('files/laporan-kemajuan-seminar'), $fileName);
         }
         $seminar->update([
+            'dosen_penguji_id'      => $request->dosen_penguji_id,
+            'mahasiswa_id'          => $request->mahasiswa_id,
             'tanggal_seminar'       => $request->tanggal_seminar,
             'hasil_seminar'         => $request->hasil_seminar,
             'saran_penguji'         => $request->saran_penguji,
