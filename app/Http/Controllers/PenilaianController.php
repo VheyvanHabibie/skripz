@@ -62,43 +62,39 @@ class PenilaianController extends Controller
 
     public function penilaianSidang(Request $request)
 {
-    DB::beginTransaction();
-    try {
-        // Simpan nilai penilaian sidang
-        foreach ($request->penilaian_id as $id) {
-            Sidang::updateOrCreate(
-                [
-                    'mahasiswa_id' => $request->mahasiswa_id,
-                    'penilaian_id' => $id
-                ],
-                ['nilai' => $request->nilai[$id]]
-            );
-        }
+    $request->validate([
+        'mahasiswa_id' => 'required|exists:mahasiswas,id',
+        'dosen_id' => 'required|array',
+        'dosen_id.*' => 'exists:dosens,id',
+        'penilaian_id' => 'required|array',
+        'penilaian_id.*.id' => 'exists:penilaians,id',
+        'nilai' => 'required|array',
+        'nilai.*.nilai' => 'integer|min:0|max:5'
+    ]);
 
-        // Hapus semua dosen penguji terkait mahasiswa ini
-        SidangPenguji::whereHas('sidang', function ($query) use ($request) {
-            $query->where('mahasiswa_id', $request->mahasiswa_id);
-        })->delete();
-
-        // Ambil semua sidang yang baru saja disimpan
-        $sidang = Sidang::where('mahasiswa_id', $request->mahasiswa_id)->first();
-
-        // Pastikan sidang tidak null sebelum menyimpan dosen penguji
-        if ($sidang) {
-            foreach ($request->dosen_id as $dosen_id) {
-                SidangPenguji::create([
-                    'sidang_id' => $sidang->id,
-                    'dosen_id' => $dosen_id
-                ]);
-            }
-        }
-
-        DB::commit();
-        return redirect()->back()->with('success', 'Data sidang berhasil disimpan.');
-    } catch (\Exception $e) {
-        DB::rollback();
-        return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
+    // Simpan nilai penilaian sidang
+    foreach ($request->penilaian_id as $id => $penilaian) {
+        Sidang::updateOrCreate(
+            [
+                'mahasiswa_id' => $request->mahasiswa_id,
+                'penilaian_id' => $penilaian['id']
+            ],
+            ['nilai' => $request->nilai[$id]['nilai']]
+        );
     }
+
+    // Simpan dosen penguji (hapus dulu yang lama, lalu tambahkan baru)
+    SidangPenguji::whereHas('seminar', function ($query) use ($request) {
+        $query->where('mahasiswa_id', $request->mahasiswa_id);
+    })->delete();
+
+    foreach ($request->dosen_id as $dosen_id) {
+        SidangPenguji::create([
+            'sidang_id' => Sidang::where('mahasiswa_id', $request->mahasiswa_id)->first()->id,
+            'dosen_id' => $dosen_id
+        ]);
+    }
+
 }
 
     public function penilaianSeminar(Request $request)
