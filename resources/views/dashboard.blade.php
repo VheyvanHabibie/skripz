@@ -1038,6 +1038,9 @@
                         show: false
                     },
                 },
+                tooltip: {
+                    enabled: false,
+                },
                 colors: ['#2E93fA', '#E91E63'],
                 legend: {
                     position: "bottom",
