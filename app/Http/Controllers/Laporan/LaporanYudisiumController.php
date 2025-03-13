@@ -35,22 +35,25 @@ class LaporanYudisiumController extends Controller
         $request->validate([
             'tanggal_sidang'        => 'required',
             'mahasiswa_id'          => 'required',
-            'ipk'                   => 'required',
+            'ipk'                   => 'required|numeric', // Pastikan IPK adalah angka
             'peringkat'             => 'required',
             'peringkat_kelulusan'   => 'required',
         ]);
 
-        $yudisium = new LaporanYudisium;
+        // Mengubah koma menjadi titik agar sesuai dengan format angka desimal
+        $ipk = str_replace(',', '.', $request->ipk);
 
+        $yudisium = new LaporanYudisium;
         $yudisium->tanggal_sidang = $request->tanggal_sidang;
         $yudisium->mahasiswa_id = $request->mahasiswa_id;
-        $yudisium->ipk = $request->ipk;
+        $yudisium->ipk = $ipk;
         $yudisium->peringkat = $request->peringkat;
         $yudisium->peringkat_kelulusan = $request->peringkat_kelulusan;
         $yudisium->save();
 
         return back()->with('success', 'store');
     }
+
 
     /**
      * Display the specified resource.
@@ -76,16 +79,18 @@ class LaporanYudisiumController extends Controller
         $request->validate([
             'tanggal_sidang'      => 'required',
             'mahasiswa_id'          => 'required',
-            'ipk'                 => 'required',
+            'ipk'                   => 'required|numeric', // Pastikan IPK adalah angka
             'peringkat'       => 'required',
             'peringkat_kelulusan'  => 'required',
         ]);
 
         $yudisium = LaporanYudisium::findOrFail($id);
+        $ipk = str_replace(',', '.', $request->ipk);
+
         $yudisium->update([
             'tanggal_sidang'      => $request->tanggal_sidang,
             'mahasiswa_id'        => $request->mahasiswa_id,
-            'ipk'                 => $request->ipk,
+            'ipk'                 => $ipk,
             'peringkat'       => $request->peringkat,
             'peringkat_kelulusan'  => $request->peringkat_kelulusan,
         ]);

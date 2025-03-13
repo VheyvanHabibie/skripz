@@ -36,11 +36,11 @@
                         </div>
                         <div class="form-group">
                             <label for="ipk" class="required">IPK</label>
-                            <input type="text" class="form-control" id="ipk" name="ipk" value="{{ $item->ipk }}" required>
+                            <input type="number" class="form-control" id="ipk" name="ipk" step="0.01" value="{{ $item->ipk }}" required>
                         </div>
                         <div class="form-group">
                             <label for="peringkat" class="required">Peringkat IPK</label>
-                            <input type="text" class="form-control" id="peringkat" name="peringkat" value="{{ $item->peringkat }}" required>
+                            <input type="number" class="form-control" id="peringkat" name="peringkat" min="1" value="{{ $item->peringkat }}" required>
                         </div>
                         <div class="form-group">
                             <label for="peringkat_kelulusan" class="required">Predikat Kelulusan</label>
