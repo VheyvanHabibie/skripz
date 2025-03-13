@@ -84,7 +84,7 @@ class PenilaianController extends Controller
     }
 
     // Simpan dosen penguji (hapus dulu yang lama, lalu tambahkan baru)
-    SidangPenguji::whereHas('seminar', function ($query) use ($request) {
+    SidangPenguji::whereHas('sidang', function ($query) use ($request) {
         $query->where('mahasiswa_id', $request->mahasiswa_id);
     })->delete();
 
