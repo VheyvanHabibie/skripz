@@ -769,7 +769,7 @@
                         fontSize: '10px',
                         fontWeight: 'bold',
                         fontFamily: 'Montserrat, sans-serif',
-                        colors: ['#ffffff', '#353957'],
+                        // colors: ['#ffffff', '#353957'],
                     },
                 },
                 plotOptions: {
@@ -786,7 +786,7 @@
                     fontFamily: 'Montserrat, sans-serif',
                     fontWeight: 400,
                     labels: {
-                        colors: ['#353957', '#ffffff'],
+                        colors: ['#ffffff', '#ffffff'],
                     },
                     markers: {
                         width: 8,
@@ -806,7 +806,7 @@
                             fontFamily: 'Montserrat, sans-serif',
                             fontWeight: 400,
                             labels: {
-                                colors: ['#353957', '#ffffff'],
+                                colors: ['#ffffff', '#ffffff'],
                             },
                         }
                     }
