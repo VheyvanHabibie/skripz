@@ -620,7 +620,7 @@
                 },
                 labels: ['S1', 'D3'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
@@ -690,7 +690,7 @@
                 },
                 labels: ['S1', 'D3'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
@@ -758,7 +758,7 @@
                 },
                 labels: ['Seminar', 'Sidang'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
@@ -826,7 +826,7 @@
                 },
                 labels: ['S1', 'D3'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
@@ -893,7 +893,7 @@
                 },
                 labels: ['S1', 'D3'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
@@ -963,7 +963,7 @@
                 },
                 labels: ['Soft Computing', 'Instrumentasi'],
                 tooltip: {
-                    enabled: false,
+                    enabled: true,
                 },
                 stroke: {
                     show: false,
