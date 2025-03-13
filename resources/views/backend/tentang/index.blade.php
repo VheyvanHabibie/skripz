@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-        <h4 class="mb-5">Tentang</h4>
 
         {{-- Error Validation --}}
         <x-error-validation-message errors="$errors" />
@@ -17,6 +16,8 @@
         @endif
         <div class="card">
             <div class="card-body">
+                <h6 class="mb-3">Konten Tentang Kami</h6>
+
                 <!-- Form untuk store atau update -->
                 <form action="{{ $tentang ? route('tentang.update', $tentang->id) : route('tentang.store') }}" method="POST"
                     id="form-konten-1" enctype="multipart/form-data">

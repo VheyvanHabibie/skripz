@@ -2,6 +2,12 @@
 
 @section('content')
     <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href=" {{ route('layanan.index') }} ">Konten Layanan</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah List Layanan</li>
+            </ol>
+        </nav>
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('listlayanan.store') }}" method="POST" class="needs-validation" novalidate id="form-konten-1"

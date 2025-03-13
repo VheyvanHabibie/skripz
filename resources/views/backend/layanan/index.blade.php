@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-        <h4 class="mb-5">Layanan</h4>
 
         {{-- Error Validation --}}
         <x-error-validation-message errors="$errors" />
@@ -17,6 +16,8 @@
         @endif
         <div class="card mb-5">
             <div class="card-body">
+                <h6 class="mb-3">Konten Layanan</h6>
+
                 <!-- Form untuk store atau update -->
                 <form action="{{ $layanan ? route('layanan.update', $layanan->id) : route('layanan.store') }}" method="POST"
                     id="form-konten-1" enctype="multipart/form-data">
@@ -41,7 +42,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <h4 class="mb-5">List Layanan</h4>
+                <h6 class="mb-5">List Layanan</h6>
             </div>
             <div class="col-auto">
                 <a class="btn btn-primary float-right mb-2 mr-2" href="{{ route('layanan.create') }}">Tambah</a>

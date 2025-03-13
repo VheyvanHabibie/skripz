@@ -2,6 +2,12 @@
 
 @section('content')
     <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href=" {{ route('paket.index') }} ">Paket</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Edit Paket</li>
+            </ol>
+        </nav>
         <div class="card">
             <div class="card-body">
 

@@ -206,7 +206,7 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/perbaikan/status', [App\Http\Controllers\Berkas\PerbaikanController::class, 'update'])->name('perbaikan.update');
     Route::delete('/perbaikan/{id}', [App\Http\Controllers\Berkas\PerbaikanController::class, 'destroy'])->name('perbaikan.destroy');
 
-    Route::middleware('can:akses data-konten-frontend')->group(function () {
+    Route::prefix('cms')->middleware('can:akses data-konten-frontend')->group(function () {
         Route::get('/konten-beranda', [App\Http\Controllers\Content\BerandaController::class, 'index'])->name('beranda.index');
         Route::post('/beranda/store', [App\Http\Controllers\Content\BerandaController::class, 'store'])->name('beranda.store');
         Route::put('/beranda/update/{id}', [App\Http\Controllers\Content\BerandaController::class, 'update'])->name('beranda.update');

@@ -2,6 +2,12 @@
 
 @section('content')
     <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href=" {{ route('paket.index') }} ">Paket</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Paket</li>
+            </ol>
+        </nav>
         <div class="card">
             <div class="card-body">
 
@@ -69,7 +75,6 @@
                         <input type="text" name="duration" id="duration" class="form-control" required
                             value="{{ old('duration') }}">
                     </div>
-
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
