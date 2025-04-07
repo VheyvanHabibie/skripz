@@ -278,6 +278,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/cari/lowongan', [App\Http\Controllers\LowonganController::class, 'search'])->name('lowongan.cari');
     Route::post('/kirim-lamaran', [App\Http\Controllers\PortalInformasiController::class, 'lamaran'])->name('lamaran.store');
     Route::resource('kartu', App\Http\Controllers\Berkas\KartuBimbinganController::class);
+    Route::resource('/fitur', App\Http\Controllers\FiturController::class);
+    Route::resource('/fitur-akun', App\Http\Controllers\FiturAkunController::class);
+    Route::resource('/akun-status', App\Http\Controllers\AkunStatusController::class);
 
 
 Route::get('/tes', [App\Http\Controllers\AIController::class, 'index']);
