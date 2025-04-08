@@ -9,6 +9,7 @@ use App\Models\Mitra;
 use App\Models\Status;
 use App\Models\Kaprodi;
 use App\Models\Mahasiswa;
+use App\Models\AkunStatus;
 use App\Models\Penjadwalan;
 use App\Models\Sekretariat;
 use App\Models\LaporanYudisium;
@@ -131,5 +132,9 @@ class User extends Authenticatable
     public function langganan()
     {
         return $this->hasMany(ManajemenLangganan::class, 'user_id', 'id');
+    }
+    public function plan()
+    {
+        return $this->belongsTo(AkunStatus::class, 'akun_status_id', 'id');
     }
 }

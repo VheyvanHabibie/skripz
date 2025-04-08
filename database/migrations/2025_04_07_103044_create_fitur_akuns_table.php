@@ -15,8 +15,10 @@ class CreateFiturAkunsTable extends Migration
     {
         Schema::create('fitur_akuns', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('akun_id')->constrained()->onDelete('cascade');
-            $table->foreignId('fitur_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('akun_id');
+            $table->foreign('akun_id')->references('id')->on('akun_statuses')->onDelete('cascade');
+            $table->unsignedBigInteger('fitur_id');
+            $table->foreign('fitur_id')->references('id')->on('fiturs')->onDelete('cascade');
             $table->integer('limit')->nullable();
             $table->timestamps();
         });
