@@ -44,7 +44,13 @@ class LaporanSeminarController extends Controller
             'catatan_mahasiswa'     => 'required|string',
             'file_laporan'          => 'required|mimes:pdf,doc,docx|max:4096',
         ]);
+        $user = auth()->user();
+        $maxSubmissions = $user->plan->getFeatureLimit('progress_report');
 
+        $submissionCount = LaporanSeminar::where('mahasiswa_id', $user->id)->count();
+        if ($maxSubmissions && $submissionCount >= $maxSubmissions) {
+            return back()->with('error', 'Maksimal ' . $maxSubmissions . ' Laporan Kemajuan Seminar dapat diunggah');
+        }
         $seminar =  new LaporanSeminar;
         $fileName = time() . '_' . $request->file('file_laporan')->getClientOriginalName();
         $request->file('file_laporan')->move(public_path('files/laporan-kemajuan-seminar'), $fileName);

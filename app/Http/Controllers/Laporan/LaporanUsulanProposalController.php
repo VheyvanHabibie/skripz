@@ -43,7 +43,13 @@ class LaporanUsulanProposalController extends Controller
             'tanggal_pengajuan'     => 'required',
             'file_laporan'          => 'required|mimes:pdf,doc,docx|max:4096',
         ]);
+        $user = auth()->user();
+        $maxSubmissions = $user->plan->getFeatureLimit('submission_proposal');
 
+        $submissionCount = LaporanProposal::where('mahasiswa_id', $user->id)->count();
+        if ($maxSubmissions && $submissionCount >= $maxSubmissions) {
+            return back()->with('error', 'Maksimal ' . $maxSubmissions . ' proposal dapat diunggah');
+        }
         $proposal =  new LaporanProposal;
         $fileName = time() . '_' . $request->file('file_laporan')->getClientOriginalName();
         $request->file('file_laporan')->move(public_path('files/laporan-usulan-proposal'), $fileName);

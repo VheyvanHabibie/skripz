@@ -15,6 +15,11 @@
                         </div>
                     </div>
                 @endif
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="row">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -25,6 +30,10 @@
                     <div class="col-md-12">
                         <div class="card shadow-smooth custom-card">
                             <div class="card-body">
+                                @if (auth()->user()->plan->hasFeature('progress_report'))
+                                <i class="small text-danger">{{ '*Maksimal ' . auth()->user()->plan->getFeatureLimit('progress_report') . ' proposal dapat diunggah' }}
+                                </i>
+                            @endif
                                 @can('akses tambah-laporan-kemajuan-seminar')
                                     <button class="btn btn-primary float-right mb-3" type="button" data-toggle="modal"
                                         data-target="#createModal" data-whatever="@mdo">Upload <i
