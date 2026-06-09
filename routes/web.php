@@ -4,17 +4,22 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
+
+Route::get('/', function () {
+    return view('dashboard'); // Or whatever the name of your main blade file is
+});
 | Web Routes
 |--------------------------------------------------------------------------
-|
+|Route::get('/', function () {
+    return redirect('/');
+});
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return redirect('/');
-});
+
+
 Route::get('/', [App\Http\Controllers\Content\LandingController::class, 'index'])->name('frontend');
 Route::post('/kirim-kontak', [App\Http\Controllers\Content\LandingController::class, 'kontak'])->name('kontak.store');
 Route::get('/reload-captcha', [App\Http\Controllers\CaptchaController::class, 'reloadCaptcha']);

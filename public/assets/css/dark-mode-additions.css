@@ -1,0 +1,365 @@
+/* =============================================================
+   DARK MODE OVERRIDES
+   Paste this at the very bottom of your app-light.css
+   OR add: <link rel="stylesheet" href="dark-mode-additions.css">
+   after your app-light.css <link> in your layout <head>
+   ============================================================= */
+
+body.dark {
+  /* Core background & text */
+  background-color: #1a1d2e !important;
+  color: #c9d1d9 !important;
+
+  /* CSS variable overrides */
+  --blue2: #1e2a3a;
+  --primary: #4e8aff;
+}
+
+/* ---- Cards ---- */
+body.dark .card {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+}
+
+body.dark .card-header {
+  background-color: #22263a !important;
+  border-bottom-color: #2e3250 !important;
+}
+
+body.dark .card-footer {
+  background-color: #22263a !important;
+  border-top-color: #2e3250 !important;
+}
+
+/* ---- Sidebar ---- */
+body.dark .sidebar-left {
+  background-color: #22263a !important;
+  border-right-color: #2e3250 !important;
+}
+
+body.dark .vertnav .nav-link {
+  color: #c9d1d9 !important;
+}
+
+body.dark .vertnav .nav-link:hover {
+  background-color: #1e2a3a !important;
+  color: #4e8aff !important;
+}
+
+body.dark .vertnav .nav-item.active {
+  background-color: #1e2a3a !important;
+}
+
+body.dark .vertnav .nav-item.active .nav-link {
+  color: #4e8aff !important;
+}
+
+body.dark .text-muted.nav-heading {
+  color: #6b7280 !important;
+}
+
+/* ---- Top navbar ---- */
+body.dark .topnav,
+body.dark .navbar {
+  background-color: #22263a !important;
+  border-bottom-color: #2e3250 !important;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link {
+  color: #c9d1d9 !important;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link:hover {
+  background-color: #1e2a3a !important;
+  color: #4e8aff !important;
+}
+
+/* ---- Tables ---- */
+body.dark .table {
+  color: #c9d1d9 !important;
+}
+
+body.dark .table thead th {
+  color: #8b949e !important;
+  border-bottom-color: #2e3250 !important;
+}
+
+body.dark .table td,
+body.dark .table th {
+  border-top-color: #2e3250 !important;
+}
+
+body.dark .table-hover tbody tr:hover {
+  background-color: #2a2f47 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #262a40 !important;
+}
+
+/* ---- Form controls ---- */
+body.dark .form-control {
+  background-color: #1a1d2e !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .form-control:focus {
+  background-color: #1a1d2e !important;
+  border-color: #4e8aff !important;
+  color: #c9d1d9 !important;
+  box-shadow: 0 0 0 0.2rem rgba(78, 138, 255, 0.25) !important;
+}
+
+body.dark .form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+body.dark .form-control:disabled,
+body.dark .form-control[readonly] {
+  background-color: #262a40 !important;
+}
+
+body.dark .input-group-text {
+  background-color: #262a40 !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Select2 ---- */
+body.dark .select2-container--bootstrap4 .select2-selection {
+  background-color: #1a1d2e !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
+  color: #c9d1d9 !important;
+}
+
+body.dark .select2-container--bootstrap4 .select2-dropdown {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+}
+
+body.dark .select2-container--bootstrap4 .select2-results__option {
+  color: #c9d1d9 !important;
+}
+
+body.dark .select2-container--bootstrap4 .select2-results__option[aria-selected=true] {
+  background-color: #2a2f47 !important;
+}
+
+body.dark .select2-search--dropdown .select2-search__field {
+  background-color: #1a1d2e !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Modals ---- */
+body.dark .modal-content {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+}
+
+body.dark .modal-header {
+  border-bottom-color: #2e3250 !important;
+}
+
+body.dark .modal-footer {
+  border-top-color: #2e3250 !important;
+}
+
+body.dark .modal-title {
+  color: #c9d1d9 !important;
+}
+
+/* ---- Dropdowns ---- */
+body.dark .dropdown-menu {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+}
+
+body.dark .dropdown-item {
+  color: #c9d1d9 !important;
+}
+
+body.dark .dropdown-item:hover,
+body.dark .dropdown-item:focus {
+  background-color: #2a2f47 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .dropdown-divider {
+  border-top-color: #2e3250 !important;
+}
+
+/* ---- Badges ---- */
+body.dark .badge-light {
+  background-color: #2a2f47 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Pagination ---- */
+body.dark .page-link {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+  color: #8b949e !important;
+}
+
+body.dark .page-link:hover {
+  background-color: #2a2f47 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .page-item.active .page-link {
+  background-color: #1b68ff !important;
+  border-color: #1b68ff !important;
+  color: #fff !important;
+}
+
+body.dark .page-item.disabled .page-link {
+  background-color: #22263a !important;
+  color: #6b7280 !important;
+}
+
+/* ---- Headings & text ---- */
+body.dark h1, body.dark h2, body.dark h3,
+body.dark h4, body.dark h5, body.dark h6,
+body.dark .h1, body.dark .h2, body.dark .h3,
+body.dark .h4, body.dark .h5, body.dark .h6,
+body.dark strong {
+  color: #e6edf3 !important;
+}
+
+body.dark .text-muted {
+  color: #6b7280 !important;
+}
+
+body.dark .text-dark {
+  color: #c9d1d9 !important;
+}
+
+body.dark a {
+  color: #4e8aff !important;
+}
+
+body.dark a:hover {
+  color: #7aabff !important;
+}
+
+/* ---- Borders & dividers ---- */
+body.dark hr {
+  border-top-color: #2e3250 !important;
+}
+
+body.dark .border,
+body.dark .border-bottom,
+body.dark .border-top,
+body.dark .border-right,
+body.dark .border-left {
+  border-color: #2e3250 !important;
+}
+
+/* ---- Breadcrumb ---- */
+body.dark .breadcrumb {
+  background-color: transparent !important;
+}
+
+body.dark .breadcrumb-item + .breadcrumb-item::before {
+  color: #6b7280 !important;
+}
+
+body.dark .breadcrumb-item.active {
+  color: #8b949e !important;
+}
+
+/* ---- List groups ---- */
+body.dark .list-group-item {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+body.dark .list-group-item-action:hover {
+  background-color: #2a2f47 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Alerts ---- */
+body.dark .alert-secondary {
+  background-color: #2a2f47 !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Nav tabs ---- */
+body.dark .nav-tabs {
+  border-bottom-color: #2e3250 !important;
+}
+
+body.dark .nav-tabs .nav-link {
+  color: #8b949e !important;
+}
+
+body.dark .nav-tabs .nav-link:hover {
+  border-color: #2e3250 !important;
+}
+
+body.dark .nav-tabs .nav-link.active {
+  color: #4e8aff !important;
+  border-color: #4e8aff !important;
+  background-color: transparent !important;
+}
+
+/* ---- Custom select ---- */
+body.dark .custom-select {
+  background-color: #1a1d2e !important;
+  border-color: #2e3250 !important;
+  color: #c9d1d9 !important;
+}
+
+/* ---- Progress bars ---- */
+body.dark .progress {
+  background-color: #2a2f47 !important;
+}
+
+/* ---- Scrollbar ---- */
+body.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #1a1d2e;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #2e3250;
+  border-radius: 3px;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #4e8aff;
+}
+
+/* ---- Background utilities ---- */
+body.dark .bg-white {
+  background-color: #22263a !important;
+}
+
+body.dark .bg-light {
+  background-color: #262a40 !important;
+}
+
+body.dark .bg-lightdark,
+body.dark .bg-eaedf4 {
+  background-color: #1a1d2e !important;
+}
+
+/* ---- Shadow ---- */
+body.dark .shadow,
+body.dark .shadow-sm {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4) !important;
+}

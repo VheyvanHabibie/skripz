@@ -253,6 +253,12 @@
                 </li>
             </ul>
         @endcan
+
+        <a class="nav-link cursor-pointer" href="javascript:void(0)" onclick="window.swapTheme();">
+            <i class="fe fe-moon fe-16" id="darkModeIcon"></i>
+            <span class="ml-3 item-text font-weight-bold" id="darkModeText">Mode Gelap</span>
+        </a>
+        
         <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100 {{ Route::currentRouteNamed('tentang-kami.index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('tentang-kami.index') }}">
@@ -356,6 +362,7 @@
                 </li>
             </ul>
         @endcan
+        
         <div class="btn-box w-100 mb-3">
             <a href="{{ url('/') }}" target="_blank" class="btn btn-primary  btn-block">
                 <i class="fe fe-arrow-left mr-1"></i>Landing Page

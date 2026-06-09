@@ -1,0 +1,76 @@
+/* --- Core Dark Background --- */
+body.dark {
+    background-color: #0f111a !important;
+    color: #e2e8f0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+body.dark {
+    background-image: none !important;
+}
+body.dark .wrapper {
+    background-color: #0f111a !important;
+}
+
+/* --- Cards, Modals, and Sidebars --- */
+body.dark .bg-white, 
+body.dark .card, 
+body.dark .sidebar-left, 
+body.dark .topnav,
+body.dark .modal-content,
+body.dark .list-group-item,
+body.dark .dropdown-menu {
+    background-color: #1e2130 !important; /* Slightly lighter than background */
+    border-color: #2b3040 !important;
+    color: #ffffff !important;
+}
+
+/* --- Text Fixes --- */
+body.dark .text-dark, 
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+    color: #ffffff !important;
+}
+
+body.dark .text-muted {
+    color: #94a3b8 !important;
+}
+
+/* --- Navigation & Hover States --- */
+body.dark .nav-link,
+body.dark .dropdown-item {
+    color: #cbd5e1 !important;
+}
+
+body.dark .nav-link:hover,
+body.dark .dropdown-item:hover,
+body.dark .list-group-item:hover {
+    background-color: #262b3d !important;
+    color: #38bdf8 !important; /* Subtle neon blue accent on hover */
+}
+
+/* --- Forms & Inputs --- */
+body.dark .form-control {
+    background-color: #151824 !important;
+    border: 1px solid #2b3040 !important;
+    color: #ffffff !important;
+}
+
+body.dark .form-control:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25) !important;
+}
+
+body.dark .form-control::placeholder {
+    color: #64748b !important;
+}
+
+/* --- Calendar Fixes --- */
+body.dark .calendar .header, 
+body.dark .calendar .weekdays,
+body.dark .calendar .btn {
+    color: #ffffff !important;
+}
+
+body.dark .sidebar-left, 
+body.dark .topnav {
+    background-color: #1e2130 !important;
+}

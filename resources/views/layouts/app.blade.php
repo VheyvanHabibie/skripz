@@ -2,6 +2,32 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <script type="text/javascript">
+        /* Dark mode — v2 standalone */
+        (function() {
+            // Apply saved theme before paint
+            if (localStorage.getItem('themeMode') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    
+        function swapTheme() {
+            var isDark  = document.body.classList.contains('dark');
+            var newMode = isDark ? 'light' : 'dark';
+    
+            document.body.classList.toggle('dark',  !isDark);
+            document.body.classList.toggle('light',  isDark);
+            localStorage.setItem('themeMode', newMode);
+    
+            var icon = document.getElementById('darkModeIcon');
+            var text = document.getElementById('darkModeText');
+            if (icon) icon.className = isDark ? 'fe fe-moon fe-16' : 'fe fe-sun fe-16';
+            if (text) text.innerText  = isDark ? 'Mode Gelap'       : 'Mode Terang';
+        }
+    
+        // Also expose on window just in case
+        window.swapTheme = swapTheme;
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,8 +38,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/select2.css') }}">
-
+    
+    <link rel="stylesheet" href="{{ asset('assets/css/app-light.css') }}" id="theme-style">
     <link rel="stylesheet" href="{{ asset('assets/css/app-light.css') }}">
+    
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -23,10 +51,14 @@
             content: '*';
             color: red;
         }
+        html.dark-preload body {
+            background-color: #1a1d2e !important;
+        }
     </style>
+    
 </head>
 
-<body class=" light " style="background-color: #234666;">
+<body class="light">
     <div class="wrapper">
         <main role="main" class="main-content">
             @yield('content')
@@ -96,6 +128,24 @@
         language: 'id' // Menggunakan kode bahasa Indonesia 'id'
     });
 </script>
-
-
+<script type="text/javascript">
+    /* Dark mode boot — v2 */
+    (function() {
+        var saved = localStorage.getItem('themeMode') || 'light';
+        var body  = document.body;
+        var icon  = document.getElementById('darkModeIcon');
+        var text  = document.getElementById('darkModeText');
+ 
+        body.classList.remove('light', 'dark');
+        body.classList.add(saved);
+ 
+        if (saved === 'dark') {
+            if (icon) icon.className = 'fe fe-sun fe-16';
+            if (text) text.innerText  = 'Mode Terang';
+        } else {
+            if (icon) icon.className = 'fe fe-moon fe-16';
+            if (text) text.innerText  = 'Mode Gelap';
+        }
+    })();
+</script>
 </html>

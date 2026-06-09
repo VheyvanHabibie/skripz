@@ -27,6 +27,7 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/app-light.css') }}" id="lightTheme">
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-mode-additions.css') }}">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.signature.js') }}"></script>
@@ -150,10 +151,20 @@
         #pengumuman-modal .modal-dialog-scrollable .modal-content {
             max-height: 100%;
         }
+    <!-- Dark mode: apply saved theme before first paint to avoid flash -->
+    <script>
+        (function () {
+            if (localStorage.getItem('themeMode') === 'dark') {
+                document.documentElement.classList.add('dark-preload');
+            }
+        })();
+    </script>
+    <style>
+        html.dark-preload body { background-color: #1a1d2e !important; }
     </style>
 </head>
 
-<body class="vertical  light  ">
+<body class="vertical light">
     <div class="wrapper">
         @include('layouts.navbar')
         @include('layouts.sidebar')
@@ -365,6 +376,50 @@
                 input.value = inputValue.slice(0, maxDigits);
             }
         }
+    </script>
+
+    <!-- Dark mode toggle — must be last script so DOM is fully ready -->
+    <script>
+        window.swapTheme = function () {
+            var body = document.body;
+            var icon = document.getElementById('darkModeIcon');
+            var text = document.getElementById('darkModeText');
+
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                localStorage.setItem('themeMode', 'light');
+                if (icon) icon.className = 'fe fe-moon fe-16';
+                if (text) text.innerText  = 'Mode Gelap';
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                localStorage.setItem('themeMode', 'dark');
+                if (icon) icon.className = 'fe fe-sun fe-16';
+                if (text) text.innerText  = 'Mode Terang';
+            }
+        };
+
+        // Restore saved theme and sync icon/text on every page load
+        (function () {
+            var saved = localStorage.getItem('themeMode') || 'light';
+            var body  = document.body;
+            var icon  = document.getElementById('darkModeIcon');
+            var text  = document.getElementById('darkModeText');
+
+            body.classList.remove('vertical', 'light', 'dark');
+            body.classList.add('vertical', saved);
+
+            if (saved === 'dark') {
+                if (icon) icon.className = 'fe fe-sun fe-16';
+                if (text) text.innerText  = 'Mode Terang';
+            } else {
+                if (icon) icon.className = 'fe fe-moon fe-16';
+                if (text) text.innerText  = 'Mode Gelap';
+            }
+
+            document.documentElement.classList.remove('dark-preload');
+        })();
     </script>
 </body>
 

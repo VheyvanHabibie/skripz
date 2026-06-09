@@ -22,5 +22,23 @@ class UserSeeder extends Seeder
             'foto'      => 'assets/images/Profiledefault.png',
         ]);
         $user->assignRole(1);
+
+        $user = User::create([
+            'name'      => 'Dosen SkripZ',
+            'email'     => 'dosen@skripz.co.id',
+            'role_id'   => 1,
+            'password'  => Hash::make('12345678'),
+            'foto'      => 'assets/images/Profiledefault.png',
+        ]);
+        $user->assignRole(1);
+
+        $user = User::create([
+            'name'      => 'Mahasiswa SkripZ',
+            'email'     => 'mahasiswa@skripz.co.id',
+            'role_id'   => 1,
+            'password'  => Hash::make('12345678'),
+            'foto'      => 'assets/images/Profiledefault.png',
+        ]);
+        $user->assignRole(1);
     }
 }

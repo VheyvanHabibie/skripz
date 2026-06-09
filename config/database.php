@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'null'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,6 +26,9 @@ return [
     | Of course, examples of configuring each database platform that is
     | supported by Laravel is shown below to make development simple.
     |
+    extension_loaded('pdo_mysql') ? array_filter([
+                Pdo\Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
     |
     | All database work in Laravel is done through the PHP PDO facilities
     | so make sure you have the driver for your particular database of
@@ -58,9 +61,7 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                Pdo\Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'options' => []
         ],
 
         'pgsql' => [

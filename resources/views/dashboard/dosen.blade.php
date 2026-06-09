@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-md-12">
-                <h5 class="h5 mb-4">Selamat Datang, {{ Auth::user()->role->name }} !</h5>
+                <h5 class="h5 mb-4">Selamat datang, {{ Auth::user()->role->name }} !</h5>
                 <form id="job-search-form" class="mb-3">
                     <div class="d-flex">
                         <input class="form-control form-control-lg mr-2 bg-white" name="search_key" id="search_key"
