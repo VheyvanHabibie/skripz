@@ -2,6 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- MUST BE FIRST: set dark class before any CSS loads to prevent flash -->
+    <script>
+        (function () {
+            if (localStorage.getItem('themeMode') === 'dark') {
+                document.documentElement.classList.add('dark-preload');
+                // Set body class immediately via document.write timing trick
+                // by adding a class to <html> which CSS can target before body exists
+            }
+        })();
+    </script>
+    <style>
+        /* Applied instantly before body renders — prevents white flash */
+        html.dark-preload,
+        html.dark-preload body,
+        html.dark-preload .wrapper {
+            background-color: #1a1d2e !important;
+            color: #c9d1d9 !important;
+        }
+        html.dark-preload .card,
+        html.dark-preload .sidebar-left {
+            background-color: #22263a !important;
+            border-color: #2e3250 !important;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -151,16 +175,6 @@
         #pengumuman-modal .modal-dialog-scrollable .modal-content {
             max-height: 100%;
         }
-    <!-- Dark mode: apply saved theme before first paint to avoid flash -->
-    <script>
-        (function () {
-            if (localStorage.getItem('themeMode') === 'dark') {
-                document.documentElement.classList.add('dark-preload');
-            }
-        })();
-    </script>
-    <style>
-        html.dark-preload body { background-color: #1a1d2e !important; }
     </style>
 </head>
 
@@ -384,6 +398,7 @@
             var body = document.body;
             var icon = document.getElementById('darkModeIcon');
             var text = document.getElementById('darkModeText');
+            var logo = document.getElementById('logo');
 
             if (body.classList.contains('dark')) {
                 body.classList.remove('dark');
@@ -391,12 +406,14 @@
                 localStorage.setItem('themeMode', 'light');
                 if (icon) icon.className = 'fe fe-moon fe-16';
                 if (text) text.innerText  = 'Mode Gelap';
+                if (logo) logo.src        = '{{ asset(setting("logo")) }}';
             } else {
                 body.classList.remove('light');
                 body.classList.add('dark');
                 localStorage.setItem('themeMode', 'dark');
                 if (icon) icon.className = 'fe fe-sun fe-16';
                 if (text) text.innerText  = 'Mode Terang';
+                if (logo) logo.src        = '{{ asset("logo/c.png") }}';
             }
         };
 
@@ -406,6 +423,7 @@
             var body  = document.body;
             var icon  = document.getElementById('darkModeIcon');
             var text  = document.getElementById('darkModeText');
+            var logo  = document.getElementById('logo');
 
             body.classList.remove('vertical', 'light', 'dark');
             body.classList.add('vertical', saved);
@@ -413,6 +431,7 @@
             if (saved === 'dark') {
                 if (icon) icon.className = 'fe fe-sun fe-16';
                 if (text) text.innerText  = 'Mode Terang';
+                if (logo) logo.src        = '{{ asset("logo/c.png") }}';
             } else {
                 if (icon) icon.className = 'fe fe-moon fe-16';
                 if (text) text.innerText  = 'Mode Gelap';

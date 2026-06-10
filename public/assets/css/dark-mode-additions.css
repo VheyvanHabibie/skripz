@@ -363,3 +363,33 @@ body.dark .shadow,
 body.dark .shadow-sm {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4) !important;
 }
+body.dark .calendar .header .month,
+body.dark .calendar .weekdays .day,
+body.dark .calendar .days .day {
+  color: #c9d1d9 !important;
+}
+
+body.dark .calendar .days .day {
+  background-color: #22263a !important;
+  border-color: #2e3250 !important;
+}
+
+body.dark .calendar .days .day.today {
+  background-color: #4C6A92 !important;
+  color: #fff !important;
+}
+
+body.dark .calendar .days .day.next,
+body.dark .calendar .days .day.prev {
+  color: #6b7280 !important;
+  background-color: #1a1d2e !important;
+}
+
+/* ---- Hardcoded color overrides (app-light.css uses color: #000) ---- */
+body.dark .calendar .header .month { color: #c9d1d9 !important; }
+body.dark th                        { color: #8b949e !important; }
+body.dark .text-dark                { color: #c9d1d9 !important; }
+body.dark p                         { color: #c9d1d9 !important; }
+body.dark small                     { color: #8b949e !important; }
+body.dark label                     { color: #8b949e !important; }
+body.dark .small                    { color: #8b949e !important; }
